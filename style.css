@@ -155,3 +155,32 @@ p { color: var(--text-soft); margin-bottom: 10px; }
   .hero-actions { width: 100%; }
   .button { width: 100%; text-align: center; }
 }
+
+.release-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 10px;
+}
+
+.release-actions .chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  font-weight: 600;
+  background: linear-gradient(160deg, rgba(12, 30, 22, 0.9), rgba(8, 18, 14, 0.95));
+  border-color: rgba(114, 248, 164, 0.45);
+}
+
+.release-actions .chip:hover,
+.release-actions .chip:focus-visible {
+  background: linear-gradient(160deg, rgba(20, 50, 36, 0.95), rgba(10, 24, 18, 1));
+}
+
+.chip-disabled {
+  opacity: 0.75;
+  cursor: not-allowed;
+  color: var(--text-soft);
+  border-color: rgba(114, 248, 164, 0.2);
+  background: rgba(9, 16, 13, 0.8);
+}
