@@ -42,7 +42,16 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 20px;
 }
 
-.brand-logo { max-height: 44px; width: auto; object-fit: contain; }
+.brand { flex: 0 0 auto; }
+.brand-logo {
+  display: block;
+  width: auto;
+  height: auto;
+  max-height: 44px;
+  max-width: min(180px, 40vw);
+  object-fit: contain;
+}
+
 .nav-links { display: flex; gap: 14px; flex-wrap: wrap; justify-content: flex-end; }
 .nav-links a { color: var(--text-soft); text-decoration: none; font-size: 0.94rem; }
 .nav-links a:hover { color: var(--accent); }
@@ -58,6 +67,14 @@ img { max-width: 100%; height: auto; display: block; }
   align-items: center;
 }
 
+.hero-content,
+.hero-visual,
+.about-content,
+.about-visual,
+.release-card {
+  min-width: 0;
+}
+
 .eyebrow {
   color: var(--accent);
   letter-spacing: .14rem;
@@ -67,8 +84,10 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .hero-logo {
-  width: min(460px, 100%);
-  max-width: 100%;
+  display: block;
+  width: 100%;
+  max-width: min(460px, 86vw);
+  min-width: 0;
   height: auto;
   margin: 14px 0 18px;
   object-fit: contain;
@@ -107,6 +126,7 @@ h3 { margin: 0 0 8px; font-size: 1.2rem; }
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 12px;
+  overflow: hidden;
 }
 
 .hero-photo,
@@ -114,6 +134,7 @@ h3 { margin: 0 0 8px; font-size: 1.2rem; }
   width: 100%;
   height: clamp(280px, 44vw, 520px);
   object-fit: cover;
+  object-position: center;
   border-radius: 14px;
 }
 
@@ -147,6 +168,7 @@ h3 { margin: 0 0 8px; font-size: 1.2rem; }
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-position: center;
   border-radius: 10px;
   margin-bottom: 12px;
 }
@@ -215,6 +237,7 @@ h3 { margin: 0 0 8px; font-size: 1.2rem; }
   .about-grid,
   .releases-grid { grid-template-columns: 1fr; }
 
+  .hero-logo { max-width: min(400px, 88vw); }
   .hero-photo,
   .about-photo { height: clamp(260px, 64vw, 440px); }
 }
