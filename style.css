@@ -167,6 +167,8 @@ p { color: var(--text-soft); margin: 0 0 10px; font-size: 1.03rem; }
 .social-grid a { text-decoration: none; color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 12px; text-align: center; }
 .social-grid a:hover, .social-grid a:focus-visible { color: var(--accent-strong); border-color: var(--accent); }
 .section-contact .mail { color: var(--accent); font-weight: 600; text-decoration: none; }
+.contact-actions { margin-top: 14px; display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+.button-disabled { opacity: 0.55; cursor: not-allowed; pointer-events: none; }
 
 .site-footer { border-top: 1px solid rgba(114, 248, 164, 0.12); padding: 20px 0 28px; color: #8ea094; font-size: 0.9rem; }
 
