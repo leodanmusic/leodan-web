@@ -27,6 +27,9 @@ Crear una web profesional para centralizar mi identidad como DJ y productor, mos
 
 ## Links
 
+- Instagram: https://www.instagram.com/leodan_music/
+- YouTube: https://www.youtube.com/@leodan_music
+- TikTok: https://www.tiktok.com/@leodan_music
 - SoundCloud: https://soundcloud.com/leodan_musicc
 - Spotify: https://open.spotify.com/artist/4t1Ic9nOnFDJj61zR9dp34
 - Contacto: leodanmusic18@gmail.com
