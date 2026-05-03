@@ -151,3 +151,47 @@ h3 { margin: 0 0 8px; font-size: 1.2rem; }
   .releases-grid { grid-template-columns: 1fr; }
   .button { width: 100%; }
 }
+
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 8px;
+  background: var(--accent);
+  color: #032012;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  left: 12px;
+}
+
+.button:hover,
+.chip:hover,
+.back-to-top:hover {
+  transform: translateY(-1px);
+  transition: transform .2s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+
+.site-footer {
+  border-top: 1px solid rgba(114, 248, 164, 0.12);
+  background: rgba(4, 7, 6, 0.92);
+  padding: 24px 0 32px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.back-to-top {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
