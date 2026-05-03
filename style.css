@@ -160,6 +160,7 @@ p { color: var(--text-soft); margin: 0 0 10px; font-size: 1.03rem; }
 }
 
 .press-list { margin: 14px 0 22px 18px; color: var(--text-soft); display: grid; gap: 6px; }
+.press-actions { display: flex; gap: 12px; flex-wrap: wrap; }
 .social-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; }
 .social-grid a { text-decoration: none; color: var(--text); border: 1px solid var(--border); border-radius: 10px; padding: 12px; text-align: center; }
 .social-grid a:hover, .social-grid a:focus-visible { color: var(--accent-strong); border-color: var(--accent); }
