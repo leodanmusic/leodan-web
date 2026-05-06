@@ -10,7 +10,6 @@
 }
 
 * { box-sizing: border-box; }
-html, body { overflow-x: hidden; }
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -36,7 +35,7 @@ body {
 }
 h1 {
   margin: 8px 0 10px;
-  font-size: clamp(1.7rem, 7vw, 3rem);
+  font-size: clamp(1.7rem, 7vw, 2.35rem);
   line-height: 1.1;
 }
 .hero-sub {
@@ -56,12 +55,12 @@ h1 {
   align-items: center;
   justify-content: center;
   padding: 12px 16px;
-  border-radius: 16px;
+  border-radius: 14px;
   text-decoration: none;
   border: 1px solid var(--border);
   background: linear-gradient(180deg, var(--surface), var(--elevated));
   color: var(--text);
-  font-weight: 650;
+  font-weight: 600;
   box-shadow: 0 0 0 1px rgba(64, 255, 148, .03), 0 10px 26px rgba(0, 0, 0, .35);
 }
 
@@ -71,19 +70,15 @@ h1 {
   box-shadow: 0 0 0 1px rgba(64, 255, 148, .2), 0 0 20px rgba(64, 255, 148, .16);
 }
 
-.button-soft {
-  background: rgba(9, 16, 14, .9);
-}
-
 .panel {
   background: linear-gradient(180deg, rgba(14, 22, 19, .92), rgba(9, 16, 14, .95));
   border: 1px solid var(--border);
-  border-radius: 20px;
+  border-radius: 18px;
   padding: 18px;
   margin-top: 14px;
 }
 
-h2 { margin: 0 0 8px; font-size: 1.25rem; letter-spacing: .02em; }
+h2 { margin: 0 0 8px; font-size: 1.25rem; }
 p { color: var(--muted); margin: 0 0 14px; }
 
 .release-card,
@@ -96,42 +91,13 @@ p { color: var(--muted); margin: 0 0 14px; }
 .merch-card img {
   width: 100%;
   aspect-ratio: 1 / 1;
-  border-radius: 16px;
+  border-radius: 14px;
   object-fit: cover;
   background: #0d1411;
   border: 1px solid #193328;
 }
 
-h3 { margin: 0 0 8px; font-size: 1.1rem; }
-
-.action-row {
-  display: grid;
-  gap: 8px;
-}
-
-.video-wrapper {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  border-radius: 16px;
-  overflow: hidden;
-  border: 1px solid rgba(64, 255, 148, .3);
-  box-shadow: 0 0 0 1px rgba(64, 255, 148, .15), 0 0 20px rgba(64, 255, 148, .12);
-  background: #000;
-  margin: 0 0 14px;
-}
-
-.video-wrapper iframe {
-  width: 100%;
-  height: 100%;
-}
-
-.release-list {
-  margin: 0;
-  padding-left: 20px;
-  display: grid;
-  gap: 8px;
-}
-.release-list span { color: var(--muted); }
+h3 { margin: 0 0 12px; font-size: 1.08rem; }
 
 .footer {
   width: min(760px, calc(100% - 32px));
@@ -154,16 +120,17 @@ h3 { margin: 0 0 8px; font-size: 1.1rem; }
 }
 
 @media (min-width: 900px) {
-  .landing { width: min(1120px, calc(100% - 72px)); padding-top: 44px; }
-  .top-links { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .landing { width: min(1020px, calc(100% - 72px)); padding-top: 44px; }
+  .top-links {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .release-card,
   .merch-card {
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 220px 1fr;
     align-items: center;
   }
-  .action-row { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .footer {
-    width: min(1120px, calc(100% - 72px));
+    width: min(1020px, calc(100% - 72px));
     grid-template-columns: repeat(5, minmax(0, 1fr));
     gap: 12px;
   }
