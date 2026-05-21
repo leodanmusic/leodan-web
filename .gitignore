@@ -1,0 +1,32 @@
+# Heavy audio files
+*.wav
+*.mp3
+*.aiff
+*.flac
+
+# Audio tool reports, tracks, and references directories
+# Ignore all contents within these folders
+audio-tool/reports/*
+audio-tool/tracks/*
+audio-tool/references/*
+
+# Keep .gitkeep files to track empty folders in Git
+!audio-tool/reports/.gitkeep
+!audio-tool/tracks/.gitkeep
+!audio-tool/references/.gitkeep
+
+# Python virtual environments
+.venv/
+.venv-audio/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Windows temporary files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
