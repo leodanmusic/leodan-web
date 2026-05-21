@@ -3,11 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>En lo Profundo | LEODAN</title>
+    <title>LEODAN - En lo Profundo | Próximo Lanzamiento</title>
     <meta
       name="description"
-      content="Landing oficial de En lo Profundo, próximo lanzamiento de LEODAN."
+      content="Landing oficial de En lo Profundo, el próximo single de House y Tech House de LEODAN. Atmósfera oscura, groove constante y tensión de club."
     />
+    <meta property="og:title" content="LEODAN - En lo Profundo | Próximo Lanzamiento" />
+    <meta property="og:description" content="Descubre el nuevo universo sonoro de LEODAN. Escucha el teaser y asegura tu Pre-save mediante Feature.fm." />
+    <meta property="og:image" content="https://leodan.net/Activos/foto-dj-hero-01.jpg" />
+    <meta property="og:url" content="https://leodan.net/en-lo-profundo.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="LEODAN" />
+    <meta property="og:locale" content="es_UY" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="LEODAN - En lo Profundo | Próximo Lanzamiento" />
+    <meta name="twitter:description" content="Descubre el nuevo universo sonoro de LEODAN. Escucha el teaser y asegura tu Pre-save mediante Feature.fm." />
+    <meta name="twitter:image" content="https://leodan.net/Activos/foto-dj-hero-01.jpg" />
+    <link rel="canonical" href="https://leodan.net/en-lo-profundo.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+
     <style>
       :root {
         color-scheme: dark;
@@ -30,6 +47,7 @@
 
       html {
         background: var(--bg);
+        scroll-behavior: smooth;
       }
 
       body {
@@ -114,41 +132,15 @@
         background: linear-gradient(180deg, transparent, rgba(0, 255, 136, 0.16));
       }
 
-      .depth-lines span:nth-child(1) {
-        height: 34%;
-      }
-
-      .depth-lines span:nth-child(2) {
-        height: 52%;
-      }
-
-      .depth-lines span:nth-child(3) {
-        height: 68%;
-      }
-
-      .depth-lines span:nth-child(4) {
-        height: 44%;
-      }
-
-      .depth-lines span:nth-child(5) {
-        height: 86%;
-      }
-
-      .depth-lines span:nth-child(6) {
-        height: 58%;
-      }
-
-      .depth-lines span:nth-child(7) {
-        height: 73%;
-      }
-
-      .depth-lines span:nth-child(8) {
-        height: 48%;
-      }
-
-      .depth-lines span:nth-child(9) {
-        height: 61%;
-      }
+      .depth-lines span:nth-child(1) { height: 34%; }
+      .depth-lines span:nth-child(2) { height: 52%; }
+      .depth-lines span:nth-child(3) { height: 68%; }
+      .depth-lines span:nth-child(4) { height: 44%; }
+      .depth-lines span:nth-child(5) { height: 86%; }
+      .depth-lines span:nth-child(6) { height: 58%; }
+      .depth-lines span:nth-child(7) { height: 73%; }
+      .depth-lines span:nth-child(8) { height: 48%; }
+      .depth-lines span:nth-child(9) { height: 61%; }
 
       .hero-copy {
         display: grid;
@@ -164,10 +156,7 @@
         text-transform: uppercase;
       }
 
-      h1,
-      h2,
-      h3,
-      p {
+      h1, h2, h3, p {
         margin: 0;
       }
 
@@ -207,6 +196,14 @@
         letter-spacing: 0.06em;
         text-align: center;
         text-transform: uppercase;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .button:not([aria-disabled="true"]):hover {
+        background: rgba(0, 255, 136, 0.18);
+        border-color: var(--green);
+        box-shadow: 0 0 16px rgba(0, 255, 136, 0.15);
+        transform: translateY(-2px);
       }
 
       .button.primary {
@@ -216,11 +213,24 @@
         box-shadow: 0 0 34px var(--shadow);
       }
 
+      .button.primary:not([aria-disabled="true"]):hover {
+        background: #00e676;
+        border-color: #00e676;
+        box-shadow: 0 0 40px rgba(0, 255, 136, 0.35);
+        transform: translateY(-2px);
+      }
+
       .button[aria-disabled="true"] {
         cursor: not-allowed;
-        border-color: rgba(232, 243, 238, 0.14);
-        background: rgba(232, 243, 238, 0.04);
+        border-color: rgba(232, 243, 238, 0.08);
+        background: rgba(232, 243, 238, 0.02);
         color: var(--soft);
+        opacity: 0.6;
+      }
+
+      .button:focus-visible {
+        outline: 2px solid var(--green);
+        outline-offset: 4px;
       }
 
       section {
@@ -231,7 +241,7 @@
       .section-head {
         display: grid;
         gap: 10px;
-        margin-bottom: 18px;
+        margin-bottom: 24px;
       }
 
       h2 {
@@ -245,43 +255,53 @@
       .story-grid,
       .content-grid {
         display: grid;
-        gap: 12px;
+        gap: 16px;
       }
 
       .story-card,
       .content-card {
-        padding: 18px;
+        padding: 24px;
         border: 1px solid rgba(0, 255, 136, 0.17);
         border-radius: 8px;
         background:
           linear-gradient(135deg, rgba(0, 255, 136, 0.08), transparent 42%),
           var(--panel);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .story-card:hover,
+      .content-card:hover {
+        border-color: rgba(0, 255, 136, 0.45);
+        box-shadow: 0 8px 24px rgba(0, 255, 136, 0.06);
+        transform: translateY(-3px);
       }
 
       .story-card h3,
       .content-card h3 {
-        margin-bottom: 9px;
-        font-size: 1.12rem;
+        margin-bottom: 12px;
+        font-size: 1.25rem;
         line-height: 1.15;
+        letter-spacing: 0.02em;
       }
 
       .story-card p,
       .content-card p,
       .section-copy {
         color: var(--muted);
-        line-height: 1.62;
+        line-height: 1.65;
+        font-size: 0.96rem;
       }
 
       .content-card {
-        min-height: 178px;
+        min-height: 188px;
         display: grid;
         align-content: space-between;
-        gap: 18px;
+        gap: 20px;
       }
 
       .status {
         width: fit-content;
-        padding: 7px 9px;
+        padding: 7px 12px;
         border: 1px solid rgba(232, 243, 238, 0.14);
         border-radius: 999px;
         color: var(--green);
@@ -295,7 +315,7 @@
         min-height: 62svh;
         display: grid;
         align-content: center;
-        gap: 20px;
+        gap: 24px;
         border-bottom: 0;
       }
 
@@ -359,17 +379,16 @@
           <p class="eyebrow">Próximo lanzamiento</p>
           <h1 id="release-title">En lo Profundo</h1>
           <p class="lead">
-            Un track oscuro, emocional y energético. Una entrada al punto donde la introspección
-            se vuelve groove y la profundidad empieza a moverse.
+            Una entrada al punto donde la introspección se convierte en groove y la profundidad empieza a moverse. House y Tech House oscuro, elegante y energético.
           </p>
           <div class="actions" aria-label="Acciones del lanzamiento">
-            <span class="button primary" aria-disabled="true">Pre-save pendiente</span>
-            <span class="button" aria-disabled="true">Smart link pendiente</span>
+            <span class="button primary" aria-disabled="true">Pre-save en Feature.fm (Pendiente)</span>
+            <span class="button" aria-disabled="true">Smart Link (Disponible próximamente)</span>
             <a
               class="button"
               href="https://open.spotify.com/intl-es/artist/4t1Ic9nOnFDJj61zR9dp34"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               Seguir en Spotify
             </a>
@@ -382,7 +401,7 @@
           <p class="eyebrow">Storytelling</p>
           <h2 id="storytelling">Profundidad, tensión y una nueva etapa.</h2>
           <p class="section-copy">
-            Esta narrativa queda lista para ajustar cuando exista fecha, portada y link oficial.
+            Diseñado para la pista, construido desde el groove y atmósferas espaciales. &ldquo;En lo Profundo&rdquo; define la nueva etapa sonora de LEODAN: tensión, pulso constante y magnetismo nocturno.
           </p>
         </div>
 
@@ -410,6 +429,28 @@
               estética minimalista y espacial de LEODAN, pero la lleva a un lugar más profundo.
             </p>
           </article>
+        </div>
+      </section>
+
+      <section aria-labelledby="campaign-info">
+        <div class="section-head">
+          <p class="eyebrow">Campaña &amp; Registro</p>
+          <h2 id="campaign-info">Unirse al lanzamiento</h2>
+          <p class="section-copy">
+            Gestionamos nuestra campaña y captación de audiencia mediante el sistema profesional de <strong>Feature.fm</strong>.
+          </p>
+        </div>
+
+        <div class="story-card" style="max-width: 800px; margin: 0 auto; border-color: var(--line-strong); background: linear-gradient(135deg, rgba(0, 255, 136, 0.12), transparent 60%), var(--panel-2);">
+          <h3 style="color: var(--green); margin-bottom: 12px; font-size: 1.25rem;">El Círculo Directo</h3>
+          <p style="margin-bottom: 18px; line-height: 1.6; color: var(--muted);">
+            Al realizar el Pre-save en Feature.fm una vez habilitado el enlace oficial, te unirás automáticamente a nuestra lista de distribución exclusiva. Esto te asegura acceso a previews en alta calidad, sets exclusivos de House y Tech House, y noticias de lanzamientos antes que nadie.
+          </p>
+          <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+            <span class="status" style="border-color: rgba(0, 255, 136, 0.2); color: var(--muted);">Pre-saves automáticos</span>
+            <span class="status" style="border-color: rgba(0, 255, 136, 0.2); color: var(--muted);">Previews exclusivas</span>
+            <span class="status" style="border-color: rgba(0, 255, 136, 0.2); color: var(--muted);">Campañas integradas</span>
+          </div>
         </div>
       </section>
 
@@ -464,21 +505,38 @@
         </div>
       </section>
 
-      <section class="spotify-cta" aria-labelledby="spotify-cta">
-        <p class="eyebrow">LEODAN en Spotify</p>
-        <h2 id="spotify-cta">Seguí el perfil para recibir el lanzamiento.</h2>
+      <section class="spotify-cta" aria-labelledby="community-cta">
+        <p class="eyebrow">Comunidad &amp; Streaming</p>
+        <h2 id="community-cta">Únete a la experiencia LEODAN.</h2>
         <p class="section-copy">
-          "En lo Profundo" todavía no tiene link oficial documentado. Hasta entonces, el CTA
-          principal dirige al perfil confirmado de LEODAN en Spotify.
+          Sigue los canales oficiales para escuchar avances en exclusiva, recibir notificaciones de los lanzamientos y conectar con la energía de pista de LEODAN.
         </p>
-        <a
-          class="button primary"
-          href="https://open.spotify.com/intl-es/artist/4t1Ic9nOnFDJj61zR9dp34"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Seguir en Spotify
-        </a>
+        <div class="actions" style="margin-top: 10px;">
+          <a
+            class="button primary"
+            href="https://open.spotify.com/intl-es/artist/4t1Ic9nOnFDJj61zR9dp34"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Seguir en Spotify
+          </a>
+          <a
+            class="button"
+            href="https://soundcloud.com/leodan_musicc"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            SoundCloud
+          </a>
+          <a
+            class="button"
+            href="https://www.youtube.com/@leodan_music"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            YouTube
+          </a>
+        </div>
       </section>
     </main>
   </body>
